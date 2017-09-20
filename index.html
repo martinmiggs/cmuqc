@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="styles/jquery-ui.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/jquery-ui.min.js"></script>
+	<script>
+		$( function() {
+			var availableTags = [
+			"Abhijeet ",
+			"Aranya",
+			"Ashwati",
+			"Avinash",
+			"Ayush",
+			"Harini",
+			"Keshav",
+			"Mike",
+			"Nirmoh",
+			"Niranjini",
+			"Praveen",
+			"Rajat",
+			"Samrat",
+			"Sandeep",
+			"Srinivas",
+			"Sudarshan",
+			"Suyash",
+			"Uday",
+			"Utsav",
+			"Varun",
+			"Varun 2.0",
+			"Vasant",
+			"Venkat",
+			"Vinod",
+			"Viswanath",
+			"Vyas"
+			];
+			function split( val ) {
+				return val.split( /,\s*/ );
+			}
+			function extractLast( term ) {
+				return split( term ).pop();
+			}
+
+			$( "#tags" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+
+      $( "#tags2" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+
+      $( "#tags3" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+
+
+      $( "#tags4" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+
+      $( "#tags5" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+
+      $( "#tags6" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+      	if ( event.keyCode === $.ui.keyCode.TAB &&
+      		$( this ).autocomplete( "instance" ).menu.active ) {
+      		event.preventDefault();
+      }
+  })
+      .autocomplete({
+      	minLength: 0,
+      	source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+          	availableTags, extractLast( request.term ) ) );
+      },
+      focus: function() {
+          // prevent value inserted on focus
+          return false;
+      },
+      select: function( event, ui ) {
+      	var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+      }
+  });
+  } );
+</script>
+<style>
+body{
+	font-family: 'Lora', serif;
+}
+</style>
+</head>
+<body>
+	<div style="text-align: center;">
+		<img src="images/cmuqc.png" width="418" height="166">
+		<h1>SCOREKEEPER</h1>
+	</div>
+	<p>
+		<div class="ui-widget">
+			<label for="tags">Team 1: </label>
+			<input id="tags" size="50">
+		</div>
+	</p>
+	<p>
+		<div class="ui-widget">
+			<label for="tags2">Team 2: </label>
+			<input id="tags2" size="50">
+		</div>
+	</p>
+	<p>
+		<div class="ui-widget">
+			<label for="tags3">Team 3: </label>
+			<input id="tags3" size="50">
+		</div>
+	</p>
+	<p>
+		<div class="ui-widget">
+			<label for="tags4">Team 4: </label>
+			<input id="tags4" size="50">
+		</div>
+	</p>
+	<p>
+		<div class="ui-widget">
+			<label for="tags5">Team 5: </label>
+			<input id="tags5" size="50">
+		</div>
+	</p>
+	<p>
+		<div class="ui-widget">
+			<label for="tags6">Quizmaster(s): </label>
+			<input id="tags6" size="50">
+		</div>
+	</p>
+
+	<hr noshade>
+	<hr noshade>
+
+	<h2>Who won the quiz?</h2>
+	<div>
+		<form action="">
+			<p>
+				<input type="radio" name="winner" value="team1"> Team 1<br>
+			</p>
+			<p>
+				<input type="radio" name="winner" value="team2"> Team 2<br>
+			</p>
+			<p>
+				<input type="radio" name="winner" value="team3"> Team 3<br>
+			</p>
+			<p>
+				<input type="radio" name="winner" value="team4"> Team 4<br>
+			</p>
+			<p>
+				<input type="radio" name="winner" value="team5"> Team 5
+			</p>		
+		</form>
+	</div>
+
+	<h2>Who came in second place?</h2>
+	<div>
+		<form action="">
+			<p>
+				<input type="radio" name="runnerup" value="team1"> Team 1<br>
+			</p>
+			<p>
+				<input type="radio" name="runnerup" value="team2"> Team 2<br>
+			</p>
+			<p>
+				<input type="radio" name="runnerup" value="team3"> Team 3<br>
+			</p>
+			<p>
+				<input type="radio" name="runnerup" value="team4"> Team 4<br>
+			</p>
+			<p>
+				<input type="radio" name="runnerup" value="team5"> Team 5
+			</p>		
+		</form>
+	</div>
+
+	<h2>Who came in third place?</h2>
+	<div>
+		<form action="">
+			<p>
+				<input type="radio" name="third" value="team1"> Team 1<br>
+			</p>
+			<p>
+				<input type="radio" name="third" value="team2"> Team 2<br>
+			</p>
+			<p>
+				<input type="radio" name="third" value="team3"> Team 3<br>
+			</p>
+			<p>
+				<input type="radio" name="third" value="team4"> Team 4<br>
+			</p>
+			<p>
+				<input type="radio" name="third" value="team5"> Team 5
+			</p>		
+		</form>
+	</div>
+</body>
+</html>
